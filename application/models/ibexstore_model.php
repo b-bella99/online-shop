@@ -10,6 +10,11 @@ class ibexstore_model extends CI_Model
         return $this->db->get('kategori_baju')->result_array();
     }
 
+    public function getKategoriJk()
+    {
+        return $this->db->get('kategori_jk')->result_array();
+    }
+
     public function getKategoriId($id_kategori)
     {
         return $this->db->get_where('kategori_baju',['id_kategori' => $id_kategori])->result_array();
