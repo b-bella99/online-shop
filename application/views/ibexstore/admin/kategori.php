@@ -110,7 +110,7 @@
                         <td><?= $k['id_kategori']; ?></td>
                         <td><?= $k['nama']; ?></td>
                         <td><img src="<?= base_url().'assets/img/'.$k['gambar']; ?>" width = 100px height = 100px></i></td>
-                        <td><a class="btn btn-success" href="<?php echo base_url(); ?>admin/editKategori/<?= $k['id_kategori'];?>">Ubah</a>
+                        <td><a class="btn btn-warning" href="<?php echo base_url(); ?>admin/editKategori/<?= $k['id_kategori'];?>">Ubah</a>
                             <a class="btn btn-danger" href="<?php echo base_url(); ?>admin/hapusKategori/<?= $k['id_kategori'];?>"> Hapus</a></td>
                         </tr>
                         <?php } ?>
