@@ -120,7 +120,7 @@
                         <td><?= $p['ukuran']; ?></td>
                         <td><?= $p['keterangan']; ?></td>
                         <td><img src="<?= base_url().'assets/img/'.$p['gambar']; ?>" width = 100px height = 100px></i></td>
-                        <td><a class="btn btn-success" href="<?php echo base_url(); ?>admin/editProduk/<?= $p['id_produk'];?>">Ubah</a>
+                        <td><a class="btn btn-warning" href="<?php echo base_url(); ?>admin/editProduk/<?= $p['id_produk'];?>">Ubah</a>
                             <a class="btn btn-danger" href="<?php echo base_url(); ?>admin/hapusProduk/<?= $p['id_produk'];?>"> Hapus</a></td>
                         </tr>
                         <?php } ?>
