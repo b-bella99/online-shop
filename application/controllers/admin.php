@@ -200,13 +200,14 @@ class admin extends CI_Controller
             $data['ukuran'] = $this->input->post('ukuran',true);
             $data['keterangan'] = $this->input->post('keterangan',true);
 
-            if ( ! $this->upload->do_upload('gambar') ){
+            if ( !$this->upload->do_upload('gambar') ){
                 $data['gambar'] = $this->input->post('gambarLama',TRUE);
                 $this->ibexstore_model->ubahProduk($data);
                 $this->session->set_flashdata('flash-data','diubah');
                 redirect('admin/produk','refresh');
             }
             else{
+                $data['gambar'] = $this->input->post('gambarLama',TRUE);
                 $upload_data = $this->upload->data();
                 $data['gambar'] = $upload_data['file_name'];
                 $this->ibexstore_model->ubahKategori($data);
