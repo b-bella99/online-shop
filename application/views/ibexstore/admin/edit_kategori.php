@@ -118,7 +118,7 @@
                                         <td>:</td>
                                         <td>
                                         <input type="hidden" name="gambarLama" value="<?= $k['gambar'] ?>"><?= $k['gambar'] ?>
-                                        <input type="file" class="form-control" name="gambar" id="gambar"></td>
+                                        <p class="text-danger"><b>*Image tidak dapat di rubah!</b></p></td>
                                         </tr>
                                         <tr>
                                         <th>Nama </th>
