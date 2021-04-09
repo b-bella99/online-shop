@@ -35,13 +35,13 @@
                     <p>Dashboard</p>
                     </a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                     <a class="nav-link" href="<?php echo base_url(); ?>admin/kategori">
                     <i class="material-icons">content_paste</i>
                     <p>Kategori Baju</p>
                     </a>
                 </li>
-                <li class="nav-item ">
+                <li class="nav-item active">
                     <a class="nav-link" href="<?php echo base_url(); ?>admin/produk">
                     <i class="material-icons">content_paste</i>
                     <p>Produk</p>
@@ -55,7 +55,7 @@
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
             <div class="navbar-wrapper">
-                <a class="navbar-brand" href="<?php echo base_url(); ?>admin/kategori">Kategori Baju</a>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>admin/kategori">Produk</a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="sr-only">Toggle navigation</span>
@@ -77,12 +77,12 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <?php foreach ($kategori as $k):?>
+        <?php foreach ($produk as $p):?>
         <div class="content">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">
-                <h1 class="h3 mb-2 text-gray-800"><i class="fa fa-pencil"></i> Ubah Kategori</h1><br>
+                <h1 class="h3 mb-2 text-gray-800"><i class="fa fa-pencil"></i> Ubah Produk</h1><br>
                     <div class="card shadow mb-4 col-md-7" align="center">
 
                         <?php if (validation_errors()):?> 
@@ -96,8 +96,8 @@
                         <div class="col-md-8">
                         <div class="card">
                             <div class="card-header card-header-primary">
-                            <h4 class="card-title">Kategori Baju "<?= $k['nama']; ?>"</h4>
-                            <p class="card-category">Lengkapi data kategori</p>
+                            <h4 class="card-title">Produk Ibex Store "<?= $p['nama']; ?>"</h4>
+                            <p class="card-category">Lengkapi data produk</p>
                             </div>
                             <div class="card-body">
                             <form action="" method="post" enctype="multipart/form-data">
@@ -106,39 +106,85 @@
                                     <table class="table table-bordeless" width="70%" cellspacing="0" style="color: black">
                                         <tbody>
                                         <tr>
-                                            <td colspan="3"><img src="<?= base_url().'assets/img/'.$k['gambar']; ?>" width = 400px height = 400px></i></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-right">ID Kategori</td>
-                                            <td>:</td>
-                                            <td><input name="id_kategori" id="id_kategori" type="number" size="5" value="<?= $k['id_kategori']; ?>" readonly></td>
+                                            <td colspan="3"><img src="<?= base_url().'assets/img/'.$p['gambar']; ?>" width = 400px height = 400px></i></td>
                                         </tr>
                                         <tr>
                                         <th>Gambar </th>
                                         <td>:</td>
-                                        <td>
-                                        <input type="hidden" name="gambarLama" value="<?= $k['gambar'] ?>"><?= $k['gambar'] ?>
-                                        <p class="text-danger"><b>*Image tidak dapat di rubah!</b></p></td>
+                                        <td><input type="hidden" name="gambarLama" value="<?= $p['gambar'] ?>"><?= $p['gambar'] ?>
+                                        <p class="text-danger"><b>*Image tidak dapat di rubah!</b></p></td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>ID Produk</th>
+                                            <td>:</td>
+                                            <td><input name="id_produk" id="id_produk" type="number" size="5" value="<?= $p['id_produk']; ?>" readonly></td>
                                         </tr>
                                         <tr>
                                         <th>Nama </th>
                                         <td>:</td>
-                                        <td><input type="text" class="form-control" name="nama" id="nama" value="<?= $k['nama']; ?>"></td>
+                                        <td><input type="text" class="form-control" name="nama" id="nama" value="<?= $p['nama']; ?>"></td>
                                         </tr>
                                         <tr>
-                                            <td colspan="3"><button type="submit" name="submit" class="btn btn-primary pull-right">Ubah</button></td>
+                                        <th>Kategori JK </th>
+                                        <td>:</td>
+                                        <td>
+                                        <select class="form-control" id="kategori_jk" name="kategori_jk">
+                                            <?php foreach($kategori_jk as $key): ?>
+                                                <?php if($key == $produk['kategori_jk']) : ?>
+                                                    <option value="<?= $key['id_kategori'] ?>"selected><?= $key['nama'] ?></option>
+                                                <?php else :?>
+                                                    <option value="<?= $key['id_kategori'] ?>"><?= $key['nama'] ?></option>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                        </select>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th>Kategori Baju </th>
+                                        <td>:</td>
+                                        <td>
+                                        <select class="form-control" id="kategori_bajuk" name="kategori_baju">
+                                            <?php foreach($kategori_baju as $key): ?>
+                                                <?php if($key == $produk['kategori_baju']) : ?>
+                                                    <option value="<?= $key['id_kategori'] ?>"selected><?= $key['nama'] ?></option>
+                                                <?php else :?>
+                                                    <option value="<?= $key['id_kategori'] ?>"><?= $key['nama'] ?></option>
+                                                <?php endif; ?>
+                                                <?php endforeach; ?>
+                                        </select>
+                                        </td>
+                                        </tr>
+                                        <tr>
+                                        <th>Harga </th>
+                                        <td>:</td>
+                                        <td><input type="text" class="form-control" name="harga" id="harga" value="<?= $p['harga']; ?>"></td>
+                                        </tr>
+                                        <tr>
+                                        <th>Ukuran </th>
+                                        <td>:</td>
+                                        <td><input type="text" class="form-control" name="ukuran" id="ukuran" value="<?= $p['ukuran']; ?>"></td>
+                                        </tr>
+                                        <tr>
+                                        <th>Keterangan </th>
+                                        <td>:</td>
+                                        <td>
+                                            <textarea class="form-control" name="keterangan" id="keterangan"><?= $p['keterangan']; ?></textarea></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="3"><button type="submit" name="submit" class="btn btn-warning pull-right">Ubah</button></td>
                                         </tr>
                                         </div>
                                         <div class="clearfix"></div>
                                     </table>
+                            </form>
                             </div>
-                            </div>
-                        </form>
+                        </div>
                         </div>
                         </div>
                     </div>
                 </div>
-                <p text-danger><a href="<?php echo base_url(); ?>admin/kategori"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a></p>
+                <p text-danger><a href="<?php echo base_url(); ?>admin/produk"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a></p>
                 </div>
             </div>
         </div>

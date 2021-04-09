@@ -55,12 +55,12 @@ class ibexstore_model extends CI_Model
 
     public function ubahKategori()
     {
-        $data = [
+        $dataUp = [
             'nama' => $this->input->post('nama'),
-            'gambar' => $this->input->post('gambar')
+            'gambar' => $this->input->post('gambarLama')
         ];
         $this->db->where('id_kategori', $this->input->post('id_kategori'));
-        $this->db->update('kategori_baju', $data);
+        $this->db->update('kategori_baju', $dataUp);
     }
 
 
@@ -124,6 +124,7 @@ class ibexstore_model extends CI_Model
 
     public function ubahProduk()
     {
+        
         $data = [
             'nama' => $this->input->post('nama'),
             'kategori_jk' => $this->input->post('kategori_jk'),
@@ -131,7 +132,7 @@ class ibexstore_model extends CI_Model
             'harga' => $this->input->post('harga'),
             'ukuran' => $this->input->post('ukuran'),
             'keterangan' => $this->input->post('keterangan'),
-            'gambar' => $this->input->post('gambar')
+            'gambar' => $this->input->post('gambarLama')
         ];
         $this->db->where('id_produk', $this->input->post('id_produk'));
         $this->db->update('produk', $data);
