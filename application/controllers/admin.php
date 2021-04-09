@@ -221,7 +221,7 @@ class admin extends CI_Controller
 	{
 		$this->ibexstore_model->hapusProduk($id_produk);
         $this->session->set_flashdata('flash-data','dihapus');
-        redirect('ibexstore/admin/produk','refresh');
+        redirect('admin/produk','refresh');
 	}
 
     // ------------------- End Produk -------------------
