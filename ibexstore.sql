@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2021 at 06:53 AM
+-- Generation Time: Apr 09, 2021 at 06:57 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -38,10 +38,10 @@ CREATE TABLE `kategori_baju` (
 --
 
 INSERT INTO `kategori_baju` (`id_kategori`, `nama`, `gambar`) VALUES
-(1, 'Rain Coat', ''),
-(2, 'Jaket', ''),
-(3, 'Parka', ''),
-(4, 'Trench Coat', '');
+(1, 'Rain Coat', 'Rain_Coat.png'),
+(2, 'Jaket', 'Jaket.png'),
+(3, 'Parka', 'Parka.png'),
+(4, 'Trench Coat', 'Trench_Coat.png');
 
 -- --------------------------------------------------------
 
@@ -103,14 +103,14 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `nama`, `kategori_jk`, `kategori_baju`, `harga`, `ukuran`, `keterangan`, `gambar`) VALUES
-(1, 'Erigo Coach Jacket Fujinkai Navy', 1, 2, '450000', 'M', 'Coach Jacket Erigo saat ini merupakan salah satu lini pakaian terbaik dan berkualitas tinggi di antara Local Brand Indonesia. Jaket berkerah dengan kancing jepret, saku fungsional, dan karet pada ujung lengan. Coach Jacket Erigo memiliki printed design yang unik pada bagian lengan dan punggung, dengan warna memukau siap menjadikanmu penuh semangat!', ''),
-(2, 'AME Raincoat - Lite Series - Mustard', 2, 1, '385000', 'L', 'Lite Series Mustard adalah bagian dari Capsule Collection 20 yang ditujukan untuk menjadi koleksi baru label musim panas AME Raincoat. Koleksi Kapsul ini dibuat sebagai hasil eksplorasi kami dalam mendesain produk. Capsule Collection juga dibuat satu kali saja, jadi kami berharap dapat membuat sesuatu yang berbeda di koleksi berikutnya.', ''),
-(3, 'MANGO - TRENCH COAT ZORA', 2, 4, '559000', 'XS', 'Parit model double breasted - Kain katun, desain midi, desain kancing ganda, simpul di bahu, kerah, lengan panjang, saku samping, sabuk yang bisa dilepas, ikat pinggang, simpul di pinggang, kancing ganda, lapisan dalam', ''),
-(4, 'MANTEL PRIA DENGAN WOL', 1, 4, '1999900', 'XS', 'MANTEL TERBUAT DARI KAIN HASIL CAMPURAN WOL. KERAH LAPEL DAN LENGAN PANJANG DENGAN BANTALAN BAHU. KANTONG DENGAN LAPEL DAN MODEL PASPOAL DOBEL DI DEPAN. BAGIAN BAWAH DENGAN BELAHAN DI BELAKANG. PENUTUP DEPAN MENYILANG DENGAN KANCING.', ''),
-(5, 'MANGO Man Raincoat Hooded Jacket', 1, 1, '1599000', 'M', '- Solid toned raincoat \r\n- Lined\r\n- Hooded neckline\r\n- Regular fit\r\n- Zip with press stud fastening\r\n- 2 pockets\r\n- Polyblend', ''),
-(6, 'Hamlin Hardwin Jaket Wanita Quotes Jacket Casual', 2, 2, '1417000', 'M', '- Item Type : Jacket\r\n- Gender : Woman\r\n- Material :  Parasut\r\n- Occassion : Casual\r\n- Neck Style : Hooded\r\n- Front Zipper Opening\r\n- Long Sleeve\r\n- Quotes Motive\r\n- Pockets\r\n- All Size Fit To L\r\n- Lingkar Dada : 96 cm\r\n- Panjang Baju : 77 cm\r\n- Panjang Tangan :54 cm', ''),
-(7, 'MKY Clothing Hoody Parka Jacket with Gold Button i', 2, 3, '429000', 'S', 'Hoody Parka Jacket with Gold Button by MKY Clothing\r\n\r\n- jaket parka\r\n- hoody\r\n- sleting dan kancing\r\n- saku\r\n- tali serut pada pinggang\r\n- regular fit', ''),
-(8, 'Superdry Squadron Parka', 1, 3, '2919000', 'L', '- Solid tone hooded parka jacket\r\n- Hooded neckline\r\n- Regular fit\r\n- Front button closure\r\n- Mutliple pockets\r\n- Cotton blend\r\n- Model wears an M and is 180cm tall', '');
+(1, 'Erigo Coach Jacket Fujinkai Navy', 1, 2, '450000', 'M', 'Coach Jacket Erigo saat ini merupakan salah satu lini pakaian terbaik dan berkualitas tinggi di antara Local Brand Indonesia. Jaket berkerah dengan kancing jepret, saku fungsional, dan karet pada ujung lengan. Coach Jacket Erigo memiliki printed design yang unik pada bagian lengan dan punggung, dengan warna memukau siap menjadikanmu penuh semangat!', 'Erigo_Coach_Jacket_Fujinkai_Navy.png'),
+(2, 'AME Raincoat - Lite Series - Mustard', 2, 1, '385000', 'L', 'Lite Series Mustard adalah bagian dari Capsule Collection 20 yang ditujukan untuk menjadi koleksi baru label musim panas AME Raincoat. Koleksi Kapsul ini dibuat sebagai hasil eksplorasi kami dalam mendesain produk. Capsule Collection juga dibuat satu kali saja, jadi kami berharap dapat membuat sesuatu yang berbeda di koleksi berikutnya.', 'AME_Raincoat_Lite_Series_Mustard.png'),
+(3, 'MANGO - TRENCH COAT ZORA', 2, 4, '559000', 'XS', 'Parit model double breasted - Kain katun, desain midi, desain kancing ganda, simpul di bahu, kerah, lengan panjang, saku samping, sabuk yang bisa dilepas, ikat pinggang, simpul di pinggang, kancing ganda, lapisan dalam', 'MANGO_TRENCH_COAT_ZORA.png'),
+(4, 'MANTEL PRIA DENGAN WOL', 1, 4, '1999900', 'XS', 'MANTEL TERBUAT DARI KAIN HASIL CAMPURAN WOL. KERAH LAPEL DAN LENGAN PANJANG DENGAN BANTALAN BAHU. KANTONG DENGAN LAPEL DAN MODEL PASPOAL DOBEL DI DEPAN. BAGIAN BAWAH DENGAN BELAHAN DI BELAKANG. PENUTUP DEPAN MENYILANG DENGAN KANCING.', 'Mantel_Pria_Dengan_Wol.png'),
+(5, 'MANGO Man Raincoat Hooded Jacket', 1, 1, '1599000', 'M', '- Solid toned raincoat \r\n- Lined\r\n- Hooded neckline\r\n- Regular fit\r\n- Zip with press stud fastening\r\n- 2 pockets\r\n- Polyblend', 'Trench_Coat.png'),
+(6, 'Hamlin Hardwin Jaket Wanita Quotes Jacket Casual', 2, 2, '1417000', 'M', '- Item Type : Jacket\r\n- Gender : Woman\r\n- Material :  Parasut\r\n- Occassion : Casual\r\n- Neck Style : Hooded\r\n- Front Zipper Opening\r\n- Long Sleeve\r\n- Quotes Motive\r\n- Pockets\r\n- All Size Fit To L\r\n- Lingkar Dada : 96 cm\r\n- Panjang Baju : 77 cm\r\n- Panjang Tangan :54 cm', 'Hamilin_Jaket_Women.png'),
+(7, 'MKY Clothing Hoody Parka Jacket with Gold Button i', 2, 3, '429000', 'S', 'Hoody Parka Jacket with Gold Button by MKY Clothing\r\n\r\n- jaket parka\r\n- hoody\r\n- sleting dan kancing\r\n- saku\r\n- tali serut pada pinggang\r\n- regular fit', 'MKY_Parka_Women.png'),
+(8, 'Superdry Squadron Parka', 1, 1, '2919000', 'L', '- Solid tone hooded parka jacket\r\n- Hooded neckline\r\n- Regular fit\r\n- Front button closure\r\n- Mutliple pockets\r\n- Cotton blend\r\n- Model wears an M and is 180cm tall', 'Superdry_Squadron_Parka.png');
 
 --
 -- Indexes for dumped tables
@@ -144,7 +144,7 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT for table `kategori_baju`
 --
 ALTER TABLE `kategori_baju`
-  MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_kategori` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `kategori_jk`
@@ -156,7 +156,7 @@ ALTER TABLE `kategori_jk`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_produk` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
