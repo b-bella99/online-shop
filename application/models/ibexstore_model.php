@@ -148,7 +148,9 @@ class ibexstore_model extends CI_Model
     // --------------- End Produk ---------------
 
     // --------------- Login ---------------
-
+    function cek_login($table,$where){		
+		return $this->db->get_where($table,$where);
+	}	
     // --------------- End Login ---------------
 }
 
